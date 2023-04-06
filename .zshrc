@@ -22,16 +22,16 @@ PROMPT='
 
 ### =======PLUGINS=======
 
-PLUGIN_DIR="$HOME/.config/zsh/plugins"
+ZSH_PLUGIN_DIR="$HOME/.config/zsh/plugins"
 
 # zsh autosuggestions
-if [ ! -d "${PLUGIN_DIR}/zsh-autosuggestions" ]; then
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${PLUGIN_DIR}/zsh-autosuggestions
+if [ ! -d "${ZSH_PLUGIN_DIR}/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_PLUGIN_DIR}/zsh-autosuggestions
 fi
-source "${PLUGIN_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "${ZSH_PLUGIN_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # zsh syntax highlighting
-if [ ! -d "${PLUGIN_DIR}/zsh-syntax-highlighting" ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${PLUGIN_DIR}/zsh-syntax-highlighting
+if [ ! -d "${ZSH_PLUGIN_DIR}/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_PLUGIN_DIR}/zsh-syntax-highlighting
 fi
-source "${PLUGIN_DIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "${ZSH_PLUGIN_DIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
