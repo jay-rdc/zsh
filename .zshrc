@@ -1,6 +1,5 @@
 ### =======EXPORTS=======
 
-export CLICOLOR=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -14,11 +13,17 @@ precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '(%b)'
 zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors ''
 
 setopt PROMPT_SUBST
 PROMPT='
 %{$fg_bold[green]%}%0~ %{$fg_bold[blue]%}${vcs_info_msg_0_}
 %{$reset_color%}$ '
+
+### =======ALIASES=======
+
+alias ls='ls --color=auto'
+alias ll='ls -l'
 
 ### =======PLUGINS=======
 
