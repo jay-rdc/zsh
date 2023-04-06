@@ -15,6 +15,8 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 
+zmodload zsh/complist
+
 setopt PROMPT_SUBST
 PROMPT='
 %{$fg_bold[green]%}%0~ %{$fg_bold[blue]%}${vcs_info_msg_0_}
@@ -26,6 +28,7 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 
 ### =======KEYBINDINGS=======
+
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
