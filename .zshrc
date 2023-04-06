@@ -7,8 +7,9 @@ export NVM_DIR="$HOME/.nvm"
 
 ### =======PROMPT SETTINGS=======
 
-autoload -Uz vcs_info
 autoload -U colors && colors
+autoload -Uz vcs_info
+
 precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '(%b)'
