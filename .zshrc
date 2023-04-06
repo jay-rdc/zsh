@@ -1,10 +1,10 @@
-### =======EXPORTS=======
+### =======EXPORTS======= ###
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-### =======PROMPT SETTINGS=======
+### =======PROMPT SETTINGS======= ###
 
 autoload -U colors && colors
 autoload -Uz vcs_info
@@ -22,19 +22,19 @@ PROMPT='
 %{$fg_bold[green]%}%0~ %{$fg_bold[blue]%}${vcs_info_msg_0_}
 %{$reset_color%}$ '
 
-### =======ALIASES=======
+### =======ALIASES======= ###
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
 
-### =======KEYBINDINGS=======
+### =======KEYBINDINGS======= ###
 
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 
-### =======PLUGINS=======
+### =======PLUGINS======= ###
 
 ZSH_PLUGIN_DIR="$HOME/.config/zsh/plugins"
 
