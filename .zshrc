@@ -1,6 +1,8 @@
 ### =======ENV VARIABLES======= ###
 
 HISTFILE="$ZDOTDIR/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=1000
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
