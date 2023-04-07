@@ -11,9 +11,9 @@ autoload -Uz vcs_info
 
 precmd() { vcs_info }
 
-zstyle ':vcs_info:git:*' formats '(%b)'
-zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors ''
+zstyle ":vcs_info:git:*" formats "(%b)"
+zstyle ":completion:*" menu select
+zstyle ":completion:*" list-colors ""
 
 zmodload zsh/complist
 
@@ -24,15 +24,15 @@ PROMPT='
 
 ### =======ALIASES======= ###
 
-alias ls='ls --color=auto'
-alias ll='ls -l'
+alias ls="ls --color=auto"
+alias ll="ls -l"
 
 ### =======KEYBINDINGS======= ###
 
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect "h" vi-backward-char
+bindkey -M menuselect "j" vi-down-line-or-history
+bindkey -M menuselect "k" vi-up-line-or-history
+bindkey -M menuselect "l" vi-forward-char
 
 ### =======PLUGINS======= ###
 
