@@ -38,16 +38,14 @@ bindkey -M menuselect "l" vi-forward-char
 
 ### =======PLUGINS======= ###
 
-ZSH_PLUGIN_DIR="$HOME/.config/zsh/plugins"
-
 # zsh autosuggestions
-if [ ! -d "${ZSH_PLUGIN_DIR}/zsh-autosuggestions" ]; then
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_PLUGIN_DIR}/zsh-autosuggestions
+if [ ! -d "$ZDOTDIR/plugins/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZDOTDIR/plugins/zsh-autosuggestions
 fi
-source "${ZSH_PLUGIN_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # zsh syntax highlighting
-if [ ! -d "${ZSH_PLUGIN_DIR}/zsh-syntax-highlighting" ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_PLUGIN_DIR}/zsh-syntax-highlighting
+if [ ! -d "$ZDOTDIR/plugins/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZDOTDIR/plugins/zsh-syntax-highlighting
 fi
-source "${ZSH_PLUGIN_DIR}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
