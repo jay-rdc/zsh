@@ -47,7 +47,7 @@ if [ ! -d "$ZDOTDIR/plugins/zsh-autosuggestions" ]; then
 fi
 source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-# zsh syntax highlighting
+# zsh syntax highlighting; must be last
 if [ ! -d "$ZDOTDIR/plugins/zsh-syntax-highlighting" ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZDOTDIR/plugins/zsh-syntax-highlighting
 fi
