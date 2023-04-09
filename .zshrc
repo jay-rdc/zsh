@@ -42,14 +42,12 @@ bindkey -M menuselect "l" vi-forward-char
 
 ### =======PLUGINS======= ###
 
-# zsh autosuggestions
-if [ ! -d "$ZDOTDIR/plugins/zsh-autosuggestions" ]; then
-  git clone https://github.com/zsh-users/zsh-autosuggestions $ZDOTDIR/plugins/zsh-autosuggestions
-fi
-source "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+function plugin {
+  [ ! -d "$ZDOTDIR/plugins/$(basename $1)" ] && git clone https://github.com/$1.git $ZDOTDIR/plugins/$(basename $1)
+  source "$ZDOTDIR/plugins/$(basename $1)/$(basename $1).zsh"
+}
 
-# zsh syntax highlighting; must be last
-if [ ! -d "$ZDOTDIR/plugins/zsh-syntax-highlighting" ]; then
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZDOTDIR/plugins/zsh-syntax-highlighting
-fi
-source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+plugin zsh-users/zsh-autosuggestions
+
+# must be at last line
+plugin zsh-users/zsh-syntax-highlighting
