@@ -1,6 +1,6 @@
 ### =======ENV VARIABLES======= ###
 
-HISTFILE="$ZDOTDIR/.zsh_history"
+HISTFILE="$HOME/.cache/zsh/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
 
