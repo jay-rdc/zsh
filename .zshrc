@@ -1,5 +1,6 @@
 ### =======ENV VARIABLES======= ###
 
+[ ! -d "$HOME/.cache/zsh" ] && mkdir -p "$HOME/.cache/zsh"
 HISTFILE="$HOME/.cache/zsh/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
