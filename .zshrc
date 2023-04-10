@@ -20,8 +20,8 @@ zmodload zsh/complist
 
 setopt PROMPT_SUBST
 PROMPT='
-%{$fg_bold[green]%}%0~ %{$fg_bold[blue]%}${vcs_info_msg_0_}
-%{$reset_color%}$ '
+%{$fg_bold[green]%}%0~ %{$fg_bold[blue]%}${vcs_info_msg_0_}%{$reset_color%}
+%F{011}$%f '
 
 ### =======ALIASES======= ###
 
