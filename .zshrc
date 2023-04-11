@@ -25,7 +25,7 @@ PROMPT='
 ### =======ALIASES======= ###
 
 alias ls="ls --color=auto"
-alias ll="ls -l"
+alias ll="ls -lh"
 
 ### =======KEYBINDINGS======= ###
 
