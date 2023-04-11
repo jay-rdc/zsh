@@ -11,7 +11,7 @@ autoload -Uz vcs_info
 
 precmd() { vcs_info }
 
-zstyle ":vcs_info:git:*" formats "on %B%F{012}שׂ %b%f%%b"
+zstyle ":vcs_info:git:*" formats "on %B%F{014}שׂ %b%f%%b"
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ""
 
