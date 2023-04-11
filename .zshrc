@@ -7,12 +7,11 @@ SAVEHIST=1000
 
 ### =======PROMPT SETTINGS======= ###
 
-autoload -U colors && colors
 autoload -Uz vcs_info
 
 precmd() { vcs_info }
 
-zstyle ":vcs_info:git:*" formats "(%b)"
+zstyle ":vcs_info:git:*" formats "on %B%F{012}שׂ %b%f%%b"
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ""
 
@@ -20,8 +19,8 @@ zmodload zsh/complist
 
 setopt PROMPT_SUBST
 PROMPT='
-%{$fg_bold[green]%}%0~ %{$fg_bold[blue]%}${vcs_info_msg_0_}%{$reset_color%}
-%F{011}$%f '
+%B%F{010}ﱮ %0~%f%b ${vcs_info_msg_0_}
+%B%F{011}﬌%f%b '
 
 ### =======ALIASES======= ###
 
