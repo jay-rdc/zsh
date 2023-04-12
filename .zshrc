@@ -19,7 +19,7 @@ zmodload zsh/complist
 
 setopt PROMPT_SUBST
 PROMPT='
-%B%F{010}ﱮ %0~%f%b ${vcs_info_msg_0_}
+%B%F{010}ﱮ %1~%f%b ${vcs_info_msg_0_}
 %B%F{011}﬌%f%b '
 
 ### =======ALIASES======= ###
