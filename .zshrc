@@ -27,6 +27,11 @@ PROMPT='
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 
+function mdcd {
+  mkdir -p $1 && cd $1
+}
+alias mdcd=mdcd
+
 ### =======KEYBINDINGS======= ###
 
 bindkey -M menuselect "h" vi-backward-char
