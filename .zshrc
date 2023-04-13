@@ -27,7 +27,7 @@ PROMPT='
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 
-function mdcd { mkdir -p $1 && cd $1 }
+function mdcd { mkdir -pv $1 && cd $1 }
 alias mdcd=mdcd
 
 ### =======KEYBINDINGS======= ###
