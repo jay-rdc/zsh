@@ -11,14 +11,12 @@ autoload -Uz vcs_info
 
 precmd() { vcs_info }
 
-zstyle ":vcs_info:git:*" formats "on %F{014}שׂ %b%f"
+zstyle ":vcs_info:git:*" formats " on %F{014}שׂ %b%f"
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ""
 
 setopt PROMPT_SUBST
-PROMPT='
-%B%F{010}ﱮ %1~%f ${vcs_info_msg_0_}
-%F{011}﬌%f%b '
+PROMPT='%B%F{011}ﱮ %1~%f${vcs_info_msg_0_}%b %F{010}%f '
 
 ### =======ALIASES======= ###
 
