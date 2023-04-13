@@ -26,6 +26,8 @@ PROMPT='
 
 alias ls="ls --color=auto"
 alias ll="ls -lh"
+alias cp="cp -iv"
+alias mv="mv -iv"
 
 function mdcd { mkdir -pv $1 && cd $1 }
 alias mdcd=mdcd
