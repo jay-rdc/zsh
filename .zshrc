@@ -15,8 +15,6 @@ zstyle ":vcs_info:git:*" formats "on %F{014}שׂ %b%f"
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ""
 
-zmodload zsh/complist
-
 setopt PROMPT_SUBST
 PROMPT='
 %B%F{010}ﱮ %1~%f ${vcs_info_msg_0_}
@@ -33,6 +31,8 @@ function mdcd { mkdir -pv $1 && cd $1 }
 alias mdcd=mdcd
 
 ### =======KEYBINDINGS======= ###
+
+zmodload zsh/complist
 
 bindkey -M menuselect "h" vi-backward-char
 bindkey -M menuselect "j" vi-down-line-or-history
