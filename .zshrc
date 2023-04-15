@@ -8,12 +8,13 @@ SAVEHIST=1000
 ### =======PROMPT SETTINGS======= ###
 
 autoload -Uz vcs_info
+eval $(dircolors -b)
 
 precmd() { vcs_info }
 
 zstyle ":vcs_info:git:*" formats " on %F{014}שׂ %b%f"
 zstyle ":completion:*" menu select
-zstyle ":completion:*" list-colors ""
+zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
 setopt PROMPT_SUBST
 PROMPT='%B%F{011}ﱮ %1~%f${vcs_info_msg_0_}%b %F{010}%f '
