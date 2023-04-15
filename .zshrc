@@ -46,8 +46,11 @@ bindkey -M menuselect "l" vi-forward-char
 ### =======PLUGINS======= ###
 
 function plugin {
-  [ ! -d "$ZDOTDIR/plugins/$(basename $1)" ] && git clone https://github.com/$1.git $ZDOTDIR/plugins/$(basename $1)
-  source "$ZDOTDIR/plugins/$(basename $1)/$(basename $1).zsh"
+  local plugin_dir="$ZDOTDIR/plugins/$(basename $1)"
+  local plugin_script="$plugin_dir/$(basename $1).zsh"
+
+  [ ! -d $plugin_dir ] && git clone https://github.com/$1.git $plugin_dir
+  [ -s $plugin_script ] && source $plugin_script
 }
 
 plugin zsh-users/zsh-autosuggestions
