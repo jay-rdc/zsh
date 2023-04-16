@@ -29,6 +29,9 @@ alias mv="mv -iv"
 function mdcd { mkdir -pv $1 && cd $1 }
 alias mdcd=mdcd
 
+function fzf_projects { cd $(fd . ~/projects -td --exclude node_modules | fzf) }
+alias fp=fzf_projects
+
 ### =======KEYBINDINGS======= ###
 
 zmodload zsh/complist
