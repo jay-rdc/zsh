@@ -30,7 +30,7 @@ function mdcd { mkdir -pv $1 && cd $1 }
 alias mdcd=mdcd
 
 function fzf_projects {
-  local project_dir=$(fd . ~/projects -td --exclude node_modules | fzf)
+  local project_dir=$(fd . $HOME/projects -td --exclude node_modules | fzf)
   [ ! -z $project_dir ] && cd $project_dir
 }
 alias fp=fzf_projects
