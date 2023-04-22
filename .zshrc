@@ -25,8 +25,11 @@ alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias cp="cp -iv"
 alias mv="mv -iv"
+alias rm="rm -v"
+alias mkdir="mkdir -pv"
+alias rmdir="rmdir -v"
 
-mdcd() { mkdir -pv $1 && cd $1 }
+mdcd() { mkdir $1 && cd $1 }
 
 fp() {
   local project_dir=$(fd . $HOME/projects -td -E node_modules | fzf)
