@@ -19,7 +19,7 @@ zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 setopt PROMPT_SUBST
 PROMPT='%B%F{011}ﱮ %1~%f${vcs_info_msg_0_}%b %F{010}%f '
 
-### =======ALIASES======= ###
+### =======ALIASES/FUNCTIONS======= ###
 
 alias ls="ls --color=auto"
 alias ll="ls -lh"
