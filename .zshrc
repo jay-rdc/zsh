@@ -27,13 +27,11 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 
 mdcd() { mkdir -pv $1 && cd $1 }
-alias mdcd=mdcd
 
-fzf_projects() {
+fp() {
   local project_dir=$(fd . $HOME/projects -td -E node_modules | fzf)
   [ ! -z $project_dir ] && cd $project_dir
 }
-alias fp=fzf_projects
 
 ### =======KEYBINDINGS======= ###
 
