@@ -26,10 +26,10 @@ alias ll="ls -lh"
 alias cp="cp -iv"
 alias mv="mv -iv"
 
-function mdcd { mkdir -pv $1 && cd $1 }
+mdcd() { mkdir -pv $1 && cd $1 }
 alias mdcd=mdcd
 
-function fzf_projects {
+fzf_projects() {
   local project_dir=$(fd . $HOME/projects -td -E node_modules | fzf)
   [ ! -z $project_dir ] && cd $project_dir
 }
@@ -51,7 +51,7 @@ bindkey -M menuselect "l" vi-forward-char
 
 ### =======PLUGINS======= ###
 
-function plugin {
+plugin() {
   local plugin_dir="$ZDOTDIR/plugins/$(basename $1)"
   local plugin_script="$plugin_dir/$(basename $1).zsh"
 
