@@ -1,7 +1,7 @@
 ### =======ENV VARIABLES======= ###
 
 [ ! -d "$XDG_CACHE_HOME/zsh" ] && mkdir -p "$XDG_CACHE_HOME/zsh"
-HISTFILE="$XDG_CACHE_HOME/zsh/.zsh_history"
+HISTFILE="$XDG_CACHE_HOME/zsh/history.zsh"
 HISTSIZE=1000
 SAVEHIST=1000
 
