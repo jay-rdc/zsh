@@ -19,7 +19,7 @@ zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 setopt PROMPT_SUBST
 PROMPT='%B%F{011}ﱮ %1~%f${vcs_info_msg_0_}%b %F{010}%f '
 
-### =======ALIASES/FUNCTIONS======= ###
+### =======ALIASES======= ###
 
 alias nv="nvim"
 alias ls="ls --color=auto"
@@ -29,6 +29,8 @@ alias mv="mv -iv"
 alias rm="rm -v"
 alias mkdir="mkdir -pv"
 alias rmdir="rmdir -v"
+
+### =======FUNCTIONS======= ###
 
 mdcd() { mkdir $1 && cd $1 }
 
