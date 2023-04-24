@@ -21,6 +21,7 @@ PROMPT='%B%F{011}ﱮ %1~%f${vcs_info_msg_0_}%b %F{010}%f '
 
 ### =======ALIASES/FUNCTIONS======= ###
 
+alias nv="nvim"
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias cp="cp -iv"
