@@ -13,6 +13,7 @@ eval $(dircolors -b)
 precmd() { vcs_info }
 
 zstyle ":vcs_info:git:*" formats " on %F{014}שׂ %b%f"
+zstyle ":vcs_info:git:*" actionformats " on %F{014}שׂ %b (%f%F{009}%a%f%F{014})%f"
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
