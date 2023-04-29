@@ -12,13 +12,13 @@ eval $(dircolors -b)
 
 precmd() { vcs_info }
 
-zstyle ":vcs_info:git:*" formats " on %F{014}שׂ %b%f"
-zstyle ":vcs_info:git:*" actionformats " on %F{014}שׂ %b (%f%F{009}%a%f%F{014})%f"
+zstyle ":vcs_info:git:*" formats " on %F{cyan}שׂ %b%f"
+zstyle ":vcs_info:git:*" actionformats " on %F{cyan}שׂ %b (%f%F{red}%a%f%F{cyan})%f"
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
 setopt PROMPT_SUBST
-PROMPT='%B%F{011}ﱮ %1~%f${vcs_info_msg_0_}%b %F{010}%f '
+PROMPT='%B%F{yellow}ﱮ %1~%f${vcs_info_msg_0_} %F{green}%f%b '
 
 ### =======ALIASES======= ###
 
