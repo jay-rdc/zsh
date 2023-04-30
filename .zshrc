@@ -5,20 +5,24 @@ HISTFILE="$XDG_CACHE_HOME/zsh/history.zsh"
 HISTSIZE=1000
 SAVEHIST=1000
 
-### =======PROMPT SETTINGS======= ###
+### =======PROMPT======= ###
 
 autoload -Uz vcs_info
-eval $(dircolors -b)
 
 precmd() { vcs_info }
 
 zstyle ":vcs_info:git:*" formats " on %F{cyan}שׂ %b%f"
 zstyle ":vcs_info:git:*" actionformats " on %F{cyan}שׂ %b (%f%F{red}%a%f%F{cyan})%f"
-zstyle ":completion:*" menu select
-zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
 setopt PROMPT_SUBST
 PROMPT='%B%F{yellow}ﱮ %1~%f${vcs_info_msg_0_} %F{green}%f%b '
+
+### =======COMPLETION======= ###
+
+eval $(dircolors -b)
+
+zstyle ":completion:*" menu select
+zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
 ### =======ALIASES======= ###
 
