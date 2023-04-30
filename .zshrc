@@ -24,6 +24,8 @@ eval $(dircolors -b)
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
+zmodload zsh/complist
+
 ### =======ALIASES======= ###
 
 alias nv="nvim"
@@ -45,8 +47,6 @@ fp() {
 }
 
 ### =======KEYBINDINGS======= ###
-
-zmodload zsh/complist
 
 bindkey -M menuselect "h" vi-backward-char
 bindkey -M menuselect "j" vi-down-line-or-history
