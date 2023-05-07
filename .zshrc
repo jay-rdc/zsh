@@ -46,6 +46,11 @@ fp() {
   [ -n "$project_dir" ] && cd $project_dir
 }
 
+tmux_start() {
+  local session_name=$(tmux ls 2> /dev/null | awk '{print $1}')
+  [ -n "$session_name" ] && tmux attach -t $session_name || tmux new
+}
+
 ### =======KEYBINDINGS======= ###
 
 bindkey -M menuselect "h" vi-backward-char
@@ -53,7 +58,7 @@ bindkey -M menuselect "j" vi-down-line-or-history
 bindkey -M menuselect "k" vi-up-line-or-history
 bindkey -M menuselect "l" vi-forward-char
 
-bindkey -s "^t" "tmux\n"
+bindkey -s "^t" "tmux_start\n"
 
 ### =======MISC======= ###
 
