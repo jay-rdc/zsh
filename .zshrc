@@ -1,4 +1,7 @@
-[ -z "$TMUX" ] && tmux
+if [ -z "$TMUX" ]; then
+  tmux has
+  [ $? -eq 0 ] && tmux attach || tmux new
+fi
 
 ### =======ENV VARIABLES======= ###
 
