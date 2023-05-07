@@ -47,8 +47,8 @@ fp() {
 }
 
 tmux_start() {
-  local session_name=$(tmux ls 2> /dev/null | awk '{print $1}')
-  [ -n "$session_name" ] && tmux attach -t $session_name || tmux new
+  tmux has &> /dev/null
+  [ $? -eq 0 ] && tmux attach || tmux new
 }
 
 ### =======KEYBINDINGS======= ###
