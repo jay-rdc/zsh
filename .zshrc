@@ -46,19 +46,12 @@ fp() {
   [ -n "$project_dir" ] && cd $project_dir
 }
 
-tmux_start() {
-  tmux has &> /dev/null
-  [ $? -eq 0 ] && tmux attach || tmux new
-}
-
 ### =======KEYBINDINGS======= ###
 
 bindkey -M menuselect "h" vi-backward-char
 bindkey -M menuselect "j" vi-down-line-or-history
 bindkey -M menuselect "k" vi-up-line-or-history
 bindkey -M menuselect "l" vi-forward-char
-
-bindkey -s "^t" "tmux_start\n"
 
 ### =======MISC======= ###
 
