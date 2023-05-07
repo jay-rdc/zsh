@@ -1,3 +1,5 @@
+[ -z "$TMUX" ] && tmux
+
 ### =======ENV VARIABLES======= ###
 
 HISTSIZE=10000
