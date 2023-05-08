@@ -1,5 +1,5 @@
 if [ -z "$TMUX" ]; then
-  tmux has
+  tmux has 2> /dev/null
   [ $? -eq 0 ] && tmux attach || tmux new
 fi
 
