@@ -1,6 +1,6 @@
 if [ -z "$TMUX" ]; then
   tmux has 2> /dev/null
-  [ $? -eq 0 ] && tmux attach || tmux new
+  [ $? -eq 1 ] && tmux new || tmux attach 2> /dev/null
 fi
 
 ### =======ENV VARIABLES======= ###
