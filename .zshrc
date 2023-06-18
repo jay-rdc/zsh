@@ -65,7 +65,7 @@ bindkey -M menuselect "l" vi-forward-char
 
 ### =======PLUGINS======= ###
 
-plugin() {
+__zsh_plugin() {
   local plugin_dir="$ZDOTDIR/plugins/$(basename $1)"
   local plugin_script="$plugin_dir/$(basename $1).zsh"
 
@@ -73,7 +73,7 @@ plugin() {
   [ -s $plugin_script ] && source $plugin_script
 }
 
-plugin zsh-users/zsh-autosuggestions
+__zsh_plugin zsh-users/zsh-autosuggestions
 
 # must be at last line
-plugin zsh-users/zsh-syntax-highlighting
+__zsh_plugin zsh-users/zsh-syntax-highlighting
