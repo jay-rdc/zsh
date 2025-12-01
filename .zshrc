@@ -35,6 +35,7 @@ zmodload zsh/complist
 ### =======ALIASES======= ###
 
 alias nv="nvim"
+alias ff="fastfetch"
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias cp="cp -iv"
