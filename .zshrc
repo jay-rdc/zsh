@@ -62,6 +62,11 @@ bindkey -M menuselect "l" vi-forward-char
 
 bindkey "^j" autosuggest-accept
 
+bindkey "^P" up-history
+bindkey "^N" down-history
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+
 ### =======MISC======= ###
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
