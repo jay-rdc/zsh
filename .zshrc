@@ -21,6 +21,7 @@ zstyle ":vcs_info:git:*" actionformats " on %F{cyan} %b (%f%F{red}%a%f%F{cyan
 
 setopt PROMPT_SUBST
 PROMPT='%B%F{yellow} %1~%f${vcs_info_msg_0_} %F{green}%f%b '
+RPROMPT='%B%F{blue} %n%f @ %F{magenta} %M%f%b'
 
 ### =======COMPLETION======= ###
 
