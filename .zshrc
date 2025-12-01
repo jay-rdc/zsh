@@ -1,8 +1,3 @@
-if [ -z "$TMUX" ]; then
-  tmux has 2> /dev/null
-  [ $? -eq 1 ] && tmux new || tmux attach 2> /dev/null
-fi
-
 ### =======ENV VARIABLES======= ###
 
 HISTSIZE=10000
