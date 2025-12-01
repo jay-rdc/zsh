@@ -48,6 +48,13 @@ fp() {
   [ -n "$project_dir" ] && cd $project_dir
 }
 
+tmux_connect() {
+  if [ -z "$TMUX" ]; then
+    tmux has 2> /dev/null
+    [ $? -eq 1 ] && tmux new || tmux attach 2> /dev/null
+  fi
+}
+
 ### =======KEYBINDINGS======= ###
 
 bindkey -M menuselect "h" vi-backward-char
