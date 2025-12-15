@@ -79,8 +79,15 @@ bindkey "^[[3~" delete-char
 
 ### =======MISC======= ###
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Fast Node Manager (fnm)
+if [ -d "$FNM_PATH" ]; then
+  path=("$FNM_PATH" $path)
+
+  # check if `fnm` command is available before evaluating
+  if (( $+commands[fnm] )); then
+    eval "$(fnm env)"
+  fi
+fi
 
 ### =======PLUGINS======= ###
 
