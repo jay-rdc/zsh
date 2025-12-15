@@ -85,7 +85,7 @@ if [ -d "$FNM_PATH" ]; then
 
   # check if `fnm` command is available before evaluating
   if (( $+commands[fnm] )); then
-    eval "$(fnm env)"
+    eval "$(fnm env --shell zsh)"
   fi
 fi
 
