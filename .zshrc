@@ -70,8 +70,9 @@ bindkey -M menuselect "l" vi-forward-char
 
 bindkey "^j" autosuggest-accept
 
-bindkey "^P" up-history
-bindkey "^N" down-history
+bindkey "^p" history-search-backward
+bindkey "^n" history-search-forward
+
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 bindkey "^[[3~" delete-char
