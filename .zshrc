@@ -81,6 +81,9 @@ bindkey "^[[3~" delete-char
 
 # Fast Node Manager (fnm)
 if [ -d "$FNM_PATH" ]; then
+  # de-duplicate PATH
+  typeset -U path PATH
+
   path=("$FNM_PATH" $path)
 
   # check if `fnm` command is available before evaluating
