@@ -28,10 +28,13 @@ RPROMPT='%B%F{blue} %n%f @ %F{magenta} %M%f%b'
 
 eval $(dircolors -b)
 
+autoload -Uz compinit
+compinit -C
+
 zstyle ":completion:*" menu select
 zstyle ":completion:*" list-colors ${(s.:.)LS_COLORS}
 
-zmodload zsh/complist
+zmodload -i zsh/complist
 
 ### =======ALIASES======= ###
 
