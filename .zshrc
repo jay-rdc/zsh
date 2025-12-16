@@ -92,6 +92,11 @@ if [ -d "$FNM_PATH" ]; then
   fi
 fi
 
+# Rust (cargo binaries)
+if [[ -d "$HOME/.cargo/bin" ]]; then
+  path=("$HOME/.cargo/bin" $path)
+fi
+
 ### =======PLUGINS======= ###
 
 __zsh_plugin() {
