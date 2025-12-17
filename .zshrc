@@ -1,3 +1,10 @@
+### =======ENV VARS======= ###
+
+# INFO: `(( $+commands[<cmd>] ))` returns true if the command exists
+
+(( $+commands[bat] )) && export MANPAGER="bat -plman"
+(( $+commands[fzf] )) && export FZF_DEFAULT_OPTS="--height=40% --layout=reverse"
+
 ### =======HISTORY======= ###
 
 HISTSIZE=10000
