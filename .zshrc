@@ -96,10 +96,7 @@ if [ -d "$FNM_PATH" ]; then
 
   path=("$FNM_PATH" $path)
 
-  # check if `fnm` command is available before evaluating
-  if (( $+commands[fnm] )); then
-    eval "$(fnm env --shell zsh)"
-  fi
+  (( $+commands[fnm] )) && eval "$(fnm env --shell zsh)"
 fi
 
 # Rust (cargo binaries)
