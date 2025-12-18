@@ -104,6 +104,9 @@ if [[ -d "$HOME/.cargo/bin" ]]; then
   path=("$HOME/.cargo/bin" $path)
 fi
 
+# fzf zsh integration
+(( $+commands[fzf] )) && eval "$(fzf --zsh)"
+
 ### =======PLUGINS======= ###
 
 __zsh_plugin() {
