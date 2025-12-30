@@ -12,6 +12,7 @@ SAVEHIST=10000
 [ ! -d "$XDG_CACHE_HOME/zsh" ] && mkdir -p "$XDG_CACHE_HOME/zsh"
 HISTFILE="$XDG_CACHE_HOME/zsh/history.zsh"
 
+setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
