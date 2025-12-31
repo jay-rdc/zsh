@@ -101,9 +101,7 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 # Rust (cargo binaries)
-if [ -d "$HOME/.cargo/bin" ]; then
-  path=("$HOME/.cargo/bin" $path)
-fi
+[ -d "$HOME/.cargo/bin" ] && path=("$HOME/.cargo/bin" $path)
 
 # fzf zsh integration
 (( $+commands[fzf] )) && eval "$(fzf --zsh)"
