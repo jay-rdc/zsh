@@ -90,6 +90,8 @@ bindkey "^[[3~" delete-char
 
 ### =======MISC======= ###
 
+[ -d "$HOME/.local/bin" ] && path=("$HOME/.local/bin" $path)
+
 # Fast Node Manager (fnm)
 if [ -d "$FNM_PATH" ]; then
   # de-duplicate PATH
