@@ -94,9 +94,6 @@ bindkey "^[[3~" delete-char
 
 # Fast Node Manager (fnm)
 if [ -d "$FNM_PATH" ]; then
-  # de-duplicate PATH
-  typeset -U path PATH
-
   path=("$FNM_PATH" $path)
 
   (( $+commands[fnm] )) && eval "$(fnm env --shell zsh)"
@@ -107,6 +104,9 @@ fi
 
 # fzf zsh integration
 (( $+commands[fzf] )) && eval "$(fzf --zsh)"
+
+# de-duplicate PATH
+typeset -U path
 
 ### =======PLUGINS======= ###
 
